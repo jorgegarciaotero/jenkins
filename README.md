@@ -38,13 +38,22 @@ networks:
 ```
     
   - __Montar la imagen:__: Con ```docker-compose up -d``` leemos el docker-compose.yaml. Montamos la imagen de docker-compose con todos los servicios.
-      - Con ```docker ps`` vemos el contenedor:
-        ``` 
-        jorge@vweb-1:~/jenkins$ docker ps
-        CONTAINER ID   IMAGE             COMMAND                  CREATED        STATUS          PORTS                                                  NAMES
-        2c3d6b70306c   jenkins/jenkins   "/usr/bin/tini -- /u…"   15 hours ago   Up 30 minutes   50000/tcp, 0.0.0.0:8081->8080/tcp, :::8081->8080/tcp   jenkins
-        ```
+      - Con ```docker ps``` vemos el contenedor:
+    ``` 
+    jorge@vweb-1:~/jenkins$ docker ps
+    CONTAINER ID   IMAGE             COMMAND                  CREATED        STATUS          PORTS                                                  NAMES
+    2c3d6b70306c   jenkins/jenkins   "/usr/bin/tini -- /u…"   15 hours ago   Up 30 minutes   50000/tcp, 0.0.0.0:8081->8080/tcp, :::8081->8080/tcp   jenkins
+    ```
+
+  - __Acceder al contenedor: __ ```docker exec -ti jenkins bash``` 
+  - __Otros comandos docker: __:
+    - ```docker-compose stop```: detiene el servicio. 
+    - ```docker-compose down```: eliminar el servicio.
+    - ```docker-compose start```: inicializa el servicio, si no lo hemos eliminado.
+    - ```docker-compose up -d```: monta el servicio, como hemos indicado.
 
 
+
+- __1.2. Jenkins&Docker. Conexión SSH__:  
 
 
